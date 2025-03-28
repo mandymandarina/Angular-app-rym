@@ -22,6 +22,7 @@ table {
     color: #61d875;
   }
   
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
   mat-card {
     margin: 2rem;
     padding: 1rem;
