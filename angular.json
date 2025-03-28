@@ -104,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "app-angular-RickyMorty"
+  "cli": {
+    "analytics": "8d5f3f46-a037-4b2a-98d6-0488387574de"
+  }
 }
