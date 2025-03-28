@@ -1,0 +1,11 @@
+<h2 class="title">🎞️ Rick and Morty Episodes</h2>
+
+<div class="episode-list">
+  <div class="episode-card" *ngFor="let ep of episodes">
+    <h3>{{ ep.name }}</h3>
+    <p><strong>Episode:</strong> {{ ep.episode }}</p>
+    <p><strong>Air Date:</strong> {{ ep.air_date }}</p>
+  </div>
+</div>
+
+

@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background : rgb(193, 245, 226);
+  }
+html, body { height: 100%;  overflow: visible !important;
+    position: static !important; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+    /*position: static !important;*/
+   /* z-index: 0 !important;*/
+  }
+
+  /* Forzar que el overlay se muestre correctamente */
+.cdk-overlay-container {
+    position: fixed !important;
+    z-index: 10000 !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+  .cdk-global-overlay-wrapper {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    pointer-events: all;
+  }
+  
+  .mat-dialog-container {
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    max-width: 90vw;
+  }
+  
+  .search-bar {
+    width: 300px;
+    margin: 1rem 2rem;
+    display: block;
+  }
+
+  /* modo oscuro */
+
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .toggle-dark {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #61d875;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  

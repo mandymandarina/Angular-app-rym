@@ -1,0 +1,11 @@
+<h2 class="title">🌍 Rick and Morty Locactions</h2>
+
+<div class="location-list">
+  <div class="location-card" *ngFor="let loc of locations">
+    <h3>{{ loc.name }}</h3>
+    <p><strong>Tipo:</strong> {{ loc.type }}</p>
+    <p><strong>Dimensión:</strong> {{ loc.dimension }}</p>
+    <p><strong>Residentes:</strong> {{ loc.residents.length }}</p>
+  </div>
+</div>
+

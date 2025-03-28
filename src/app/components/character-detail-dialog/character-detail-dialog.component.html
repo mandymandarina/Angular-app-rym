@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{ data.name }}</h2>
+
+<div mat-dialog-content>
+  <img [src]="data.image" alt="{{ data.name }}" width="150" />
+  <p><strong>Status:</strong> {{ data.status }}</p>
+  <p><strong>Species:</strong> {{ data.species }}</p>
+  <p><strong>Gender:</strong> {{ data.gender }}</p>
+  <p><strong>Origin:</strong> {{ data.origin.name }}</p>
+  <p><strong>Location:</strong> {{ data.location.name }}</p>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close color="primary">Close</button>
+</div>
+

@@ -1,0 +1,65 @@
+<h2>🧪 Rick and Morty Characters</h2>
+
+
+<mat-card class="character-search-card">
+    <h4>Search the character</h4>
+  
+    <mat-form-field class="character-search-field" appearance="fill" floatLabel="never">
+      <input
+        matInput
+        class="character-search-input"
+        placeholder="Search for name, species or status"
+        (keyup)="applyFilter($event)"
+      />
+    </mat-form-field>
+  </mat-card>
+  
+  
+<mat-card *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</mat-card>
+
+<mat-card *ngIf="!loading">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef> Image </th>
+      <td mat-cell *matCellDef="let element">
+        <img [src]="element.image" alt="{{ element.name }}" width="50" />
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{ element.status }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="species">
+      <th mat-header-cell *matHeaderCellDef> Species </th>
+      <td mat-cell *matCellDef="let element"> {{ element.species }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="centered"> Details </th>
+        <td mat-cell *matCellDef="let element" class="centered">
+          <button mat-icon-button color="accent" (click)="openDetails(element)">
+            <mat-icon>info</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      
+      
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+  <mat-paginator [pageSize]="5" [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+
+</mat-card>
