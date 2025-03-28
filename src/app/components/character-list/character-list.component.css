@@ -86,7 +86,15 @@ table {
   mat-icon {
     vertical-align: middle;
   }
- 
+ ::ng-deep .mdc-line-ripple {
+  display: none;
+ }
 
-  
+  input {
+    width: 98%;
+  }
+  ::ng-deep input::placeholder {
+    color: white;
+    opacity: 0.7;
+  }
  

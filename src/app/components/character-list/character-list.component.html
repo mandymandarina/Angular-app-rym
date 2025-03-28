@@ -1,19 +1,17 @@
 <h2>🧪 Rick and Morty Characters</h2>
 
 
-<mat-card appearance="outlined" class="character-search-card">
-    <h4>Search the character</h4>
-  
-    <mat-form-field class="character-search-field" appearance="fill" floatLabel="never">
-      <input
-        matInput
-        class="character-search-input"
-        placeholder="Search for name, species or status"
-        (keyup)="applyFilter($event)"
-      />
-    </mat-form-field>
-  </mat-card>
-  
+<mat-card class="character-search-card">
+  <h4>Search the character</h4>
+  <mat-form-field appearance="fill" class="character-search-field">
+    <input
+      matInput
+      placeholder="Search for name, species or status"
+      (keyup)="applyFilter($event)"
+    />
+  </mat-form-field>
+</mat-card>
+
   
 <mat-card appearance="outlined" *ngIf="loading">
   <mat-spinner></mat-spinner>

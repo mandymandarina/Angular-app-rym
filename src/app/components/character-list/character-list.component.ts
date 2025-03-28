@@ -8,9 +8,10 @@ import { log } from 'console';
 
 
 @Component({
-  selector: 'app-character-list',
-  templateUrl: './character-list.component.html',
-  styleUrls: ['./character-list.component.css'],
+    selector: 'app-character-list',
+    templateUrl: './character-list.component.html',
+    styleUrls: ['./character-list.component.css'],
+    standalone: false
 })
 export class CharacterListComponent implements OnInit {
   displayedColumns: string[] = ['image', 'name', 'status', 'species', 'actions'];
@@ -56,6 +57,12 @@ export class CharacterListComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
     this.dataSource.filter = filterValue;
   }
+
+  clearField(event: Event) {
+    const input = event.target as HTMLInputElement;
+    input.value = '';
+  }
+  
   
 
   openDetails(character: any): void {
