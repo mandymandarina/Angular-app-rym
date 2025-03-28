@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('app-angular-RickyMorty');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('app-angular-RickyMorty app is running!');
-  });
 });

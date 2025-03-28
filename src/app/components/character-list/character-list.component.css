@@ -97,4 +97,8 @@ table {
     color: white;
     opacity: 0.7;
   }
+
+  ::ng-deep .mdc-text-field--filled {
+    border-radius: 8px;
+  }
  

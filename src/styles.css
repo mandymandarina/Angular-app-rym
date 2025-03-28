@@ -1,19 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     background : rgb(193, 245, 226);
   }
-html, body { height: 100%;  overflow: visible !important;
-    position: static !important; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-* {
-    /*position: static !important;*/
-   /* z-index: 0 !important;*/
-  }
 
-  /* Forzar que el overlay se muestre correctamente */
+html, body { 
+  height: 100%;  
+  overflow: visible !important;
+  position: static !important; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
 .cdk-overlay-container {
     position: fixed !important;
     z-index: 10000 !important;
@@ -47,7 +50,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     display: block;
   }
 
-  /* modo oscuro */
+  /* Modo oscuro */
 
   body.dark-mode {
     background-color: #121212;
@@ -66,4 +69,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     cursor: pointer;
     z-index: 1000;
   }
+
+
   
